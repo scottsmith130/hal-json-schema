@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "HAL Schema",
   "description": "JSON Hypertext Application Language Version 8 Internet-Draft, according to https://tools.ietf.org/html/draft-kelly-json-hal-08",
   "definitions": {
