@@ -50,7 +50,6 @@
       "allOf": [
         {
           "required": [
-            "href",
             "templated",
             "name"
           ],
