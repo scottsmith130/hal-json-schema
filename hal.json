@@ -1,6 +1,6 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "HAL Schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "HAL Object",
   "description": "JSON Hypertext Application Language Version 8 Internet-Draft, according to https://tools.ietf.org/html/draft-kelly-json-hal-08",
   "definitions": {
     "link": {
@@ -50,7 +50,6 @@
       "allOf": [
         {
           "required": [
-            "href",
             "templated",
             "name"
           ],
@@ -83,11 +82,9 @@
                 },
                 {
                   "type": "array",
-                  "items": [
-                    {
-                      "$ref": "#/definitions/curiesLink"
-                    }
-                  ]
+                  "items": {
+                    "$ref": "#/definitions/curiesLink"
+                  }
                 }
               ]
             }
@@ -99,11 +96,9 @@
               },
               {
                 "type": "array",
-                "items": [
-                  {
-                    "$ref": "#/definitions/link"
-                  }
-                ]
+                "items": {
+                  "$ref": "#/definitions/link"
+                }
               }
             ]
           }
@@ -118,11 +113,9 @@
               },
               {
                 "type": "array",
-                "items": [
-                  {
-                    "$ref": "#/definitions/resource"
-                  }
-                ]
+                "items": {
+                  "$ref": "#/definitions/resource"
+                }
               }
             ]
           }
@@ -130,5 +123,9 @@
       }
     }
   },
-  "$ref": "#/definitions/resource"
+  "allOf": [
+    {
+      "$ref": "#/definitions/resource"
+    }
+  ]
 }
